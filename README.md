@@ -28,16 +28,26 @@ src/
 
 Start S3-compatible storage:
 
-```shell
-$ docker compose up
-```
+- step 1
+    ```shell
+    $ docker compose up
+    ```
 
-```shell
-update the .env file
-```
+- step2
+    ```shell
+    update the .env file
+    ```
 
-```shell
-$ pnpm install
-$ pnpm build
-$ pnpm dev
-```
+- step 3
+    ```shell
+    $ pnpm install
+    $ pnpm build
+    $ pnpm dev
+    ```
+
+- step 4
+    ```shell
+    Access the Swagger UI at http://localhost:3000/api-docs
+    ```
+
+
