@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  title: Media Uploader API
+  description: API for uploading and managing media files
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+paths:
+  /upload-url:
+    post:
+      summary: Upload a file from a URL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sourceUrl:
+                  type: string
+                  example: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=5020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                destinationDir:
+                  type: string
+                  example: "uploads"
+      responses:
+        "200":
+          description: File uploaded successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  fileUrl:
+                    type: string
+  /health:
+    get:
+      summary: Health check endpoint
+      responses:
+        "200":
+          description: Service is running
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string

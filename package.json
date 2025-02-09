@@ -1,0 +1,40 @@
+{
+  "name": "@scoretravel/takehome",
+  "type": "module",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.15",
+    "pnpm": "9.x"
+  },
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "nodemon",
+    "build": "tsc",
+    "test": "vitest --run src",
+    "test:watch": "vitest src",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.744.0",
+    "@aws-sdk/lib-storage": "^3.744.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mime": "^4.0.6",
+    "swagger-ui-express": "^5.0.1",
+    "undici": "^7.3.0",
+    "vitest": "^3.0.5",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.7",
+    "@types/yamljs": "^0.2.34",
+    "depcheck": "^1.4.7",
+    "supertest": "^7.0.0",
+    "typescript": "^5.7.3"
+  }
+}
